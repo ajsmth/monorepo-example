@@ -1,3 +1,8 @@
 const { createMetroConfiguration } = require('expo-yarn-workspaces');
 
-module.exports = createMetroConfiguration(__dirname);
+const defaultConfig = createMetroConfiguration(__dirname);
+
+
+defaultConfig.transformer.assetPlugins = ['expo-asset/tools/hashAssetFiles']
+
+module.exports = defaultConfig
